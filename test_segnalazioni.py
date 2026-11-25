@@ -24,9 +24,7 @@ class TestSegnalazioni(unittest.TestCase):
 
     def test_prenotazione_alla_capienza_massima(self):
         self.agenda.aggiungi_sala(Sala("R1", "Sala riunioni", 10))
-        richiesta = Prenotazione(
-            "R1", self.giorno, "09:00", "10:00", "Mario Rossi", 10
-        )
+        richiesta = Prenotazione("R1", self.giorno, "09:00", "10:00", "Mario Rossi", 10)
 
         id_prenotazione = self.agenda.prenota(richiesta, oggi=self.giorno)
 
